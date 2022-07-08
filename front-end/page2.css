@@ -1,0 +1,70 @@
+body {
+    background-image: url("https://i.pinimg.com/originals/e6/f6/d5/e6f6d54d1ccfd765c3a1e0f7ada47b09.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+   }
+   #rectangle {
+    height: 900px;
+    width: 65%;
+    background-color: #FFDCCC;
+    margin-top: 2.5%;
+    margin-left: 17.5%;
+    border-style: solid;
+    border-color: #C59849;
+  }
+
+
+  #rectangle2 {
+    height: 900px;
+    width: 55%;
+    background-color: #dad2bc;
+    margin-top: -47.7%;
+    margin-left: 20.1%;
+    border-style: solid;
+    border-color: #FFDCCC;
+  }
+  #font1 {
+    font-family: Helvetica;
+    text-align: center; 
+    margin-top: -46.5%;
+    color: #C59849;
+    font-size: xxx-large;
+    text-decoration: underline;
+
+    }
+
+    .categories {
+      font-family: Helvetica;
+      font-size: x-large;
+      margin-top: 3%;
+      margin-left: 20%;
+      text-decoration: underline;
+      text-decoration-color: #C59849;
+    }
+
+    .categories2 {
+      font-family: Helvetica;
+      font-size: x-large;
+      margin-top: -2.8%;
+      margin-left: 37.5%;
+      text-decoration: underline;
+      text-decoration-color: #C59849;
+
+    }
+    .categories3 {
+      font-family: Helvetica;
+      font-size: x-large;
+      margin-top: -2.8%;
+      margin-left: 57.5%;
+      text-decoration: underline;
+      text-decoration-color: #C59849;
+
+    }
+    .categories4 {
+      font-family: Helvetica;
+      font-size: x-large;
+      margin-top: -2.65%;
+      margin-left: 72.5%;
+      text-decoration: underline;
+      text-decoration-color: #C59849;
+    }
