@@ -9,9 +9,9 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../front-end/webpage.html'))
 })
 
-app.get('/html', (req, res) => {
-    res.sendFile(path.join(__dirname, '../front-end/page2.html'))
-})
+// app.get('/html', (req, res) => {
+//     res.sendFile(path.join(__dirname, '../front-end/page2.html'))
+// })
 
 const port = process.env.PORT || 4000
 
