@@ -8,6 +8,15 @@ const app = express()
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../front-end/webpage.html'))
 })
+app.get('/css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end/styles.css'))
+})
+app.get('/new-page', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end/page2.html'))
+})
+app.get('/new-page/css', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end/page2.css'))
+})
 
 // app.get('/html', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../front-end/page2.html'))
