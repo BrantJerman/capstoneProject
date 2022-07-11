@@ -42,20 +42,22 @@
     <br>
     <p class="textForSide3">Difficulty:</p>
     
-    <div class="radio">
-        <label for="rating-one">Easy:</label>
-        <input type="radio" name="rating" value="1" id="difficulty-easy" checked="true"/>
-    </div>
+        <select id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                
+              </select>
+        
+        <style>
 
-    <div class="radio">
-        <label for="rating-two">Medium:</label>
-        <input type="radio" name="rating" value="2" id="difficulty-medium"/>
-    </div>
+            
 
-    <div class="radio">
-        <label for="rating-three">Hard:</label>
-        <input type="radio" name="rating" value="3" id="difficulty-hard"/>
-    </div>
+        </style>
+        
+          
+              
+      
     <p class="textForSide">Rating <br>(Out of 5):</p>
     
     <div class="radio2">
@@ -82,7 +84,7 @@
         <input type="radio" name="rating" value="5" id="rating-five"/>
     </div>
     <p class="submitText">Click Here To  Submit <br> Your Trail To Our <br>Database!</p>
-    <input type="submit" class="submit" id="add">
+    <input type="submit" class="submit" id="add" onclick="submitTrail()">
 
     <h4 class="gear">Gear <br>Recommendations:</h4>
     <p class="elvis">Bike</p>
@@ -96,7 +98,7 @@
 
 
     <h5 class="otherSubmits" >Click Here To <br>See Trails That Others <br> Have Submitted</h5>
-    <input type="submit" class="submit2" id="page2" onclick="submitTrail()">
+    <input type="submit" class="submit2" id="page2" onclick="otherPage()">
     <footer>
         <p id="font2">Author: Brant Jerman
             <br>
@@ -112,6 +114,9 @@
     </div>
 
     <img src="../IMG_1996.jpg" alt="Girl in a jacket" 
-    width="300" height="350" class="pic">    
+    width="300" height="350" class="pic">   
+    
+    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <script src="index.js"></script>
 </body>
 </html>

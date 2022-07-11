@@ -46,7 +46,9 @@ function submitTrail () {
     if (trail.value < 1){
         alert('Make sure to add the name of your trail!')
         return
-    } else if (location.value < 1){
+    } 
+    
+    if (location.value < 1){
         alert('Make sure to add the location of your trail!')
         return
     }
@@ -57,4 +59,8 @@ function submitTrail () {
         rating: +userRating, 
         countryId: +countrySelect.value
     }
+}
+
+function otherPage () {
+
 }
