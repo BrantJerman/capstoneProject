@@ -5,7 +5,7 @@ body {
    }
 
    #rectangle {
-    height: 900px;
+    height: 930px;
     width: 12.5%;
     background-color: #C59849;
     margin-top: 2.5%;
@@ -72,7 +72,7 @@ body {
     height: 900px;
     width: 55%;
     background-color: #dad2bc;
-    margin-top: -47.7%;
+    margin-top: -48.7%;
     margin-left: 21.8%;
     border-style: solid;
     border-color: #FFDCCC;
@@ -97,17 +97,17 @@ body {
 }
 
 #rectangle3 {
-  height: 900px;
+  height: 930px;
   width: 12.5%;
   background-color: #C59849;
-  margin-top: -3%;
+  margin-top: -4%;
   border-style: solid;
   border-color: #FFDCCC;
   margin-left: 83.2%;
 }
 
 .h3 {
-  margin-top: -47%;
+  margin-top: -48.5%;
   margin-left: 79.4%;
   text-align: center;
   font-size: xx-large;
@@ -115,89 +115,32 @@ body {
 
 .input {
   margin-left: 86%;
+  margin-bottom: -5%;
 }
 
 .textForSide{
-  margin-top: 2%;
+  margin-top: -.3%;
   margin-left: 80%;
   text-align: center;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: x-large;
 }
-.textForSide2{
-  margin-top: -.5%;
-  margin-left: 68.6%;
+.textForSide6{
+  margin-top: .5%;
+  margin-left: 80%;
   text-align: center;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: x-large;
-
 }
 
-.textForSide21{
-  margin-top: -2.67%;
-  margin-left: 73.9%;
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: x-large;
 
-}
-.textForSide22{
-  margin-top: -2.77%;
-  margin-left: 79.5%;
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: x-large;
-
-}
-.textForSide23{
-  margin-top: -2.67%;
-  margin-left: 84.5%;
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: x-large;
-
-}
-.textForSide24{
-  margin-top: -2.67%;
-  margin-left: 89.8%;
-  text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: x-large;
-
-}
 .textForSide3{
-  margin-bottom: -1.8%;
+  margin-bottom: -.5%;
   margin-left: 80%;
   text-align: center;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: x-large;
 
-}
-
-.diff{
-    margin-left: 86%;
-}
-.diff2{
-  margin-left: 2.4%;
-}
-.diff3{
-  margin-left: 2.6%;
-}
-
-.Kanye {
-  margin-left: 84%;
-}
-.Kanye2 {
-  margin-left: 1.6%;
-}
-.Kanye3{
-  margin-left: 1.6%;
-}
-.Kanye4 {
-  margin-left: 1.6%;
-}
-.Kanye5 {
-  margin-left: 1.6%;
 }
 
 .submitText {
@@ -304,8 +247,17 @@ body {
   margin-bottom: 2.5%;
 }
 .pic {
-  margin-top: -20%;
+  margin-top: -20.5%;
   margin-left: 27%;
   margin-bottom: 10%;
 
+}
+.radio {
+  margin-left: 87%;
+  margin-top: 1%;
+  margin-bottom: .7%;
+}
+.radio2 {
+  margin-left: 88.5%;
+  margin-top: .5%;
 }
