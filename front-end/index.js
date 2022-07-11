@@ -2,11 +2,12 @@ const btn1 = document.getElementById('btn1')
 const btn2 = document.getElementById('btn2')
 const btn3 = document.getElementById('btn3')
 
-// function btn1() {
-//     axios.get('http://localhost')
-// }
-
 function bstTrail () {
+    axios.get(`/bst-trail`)
+    .then(res => {
+        res.da
+    })
+    
     return `
         <div class="bstTrail">
         <p class="trailName">${trail.name}</p>
@@ -42,23 +43,37 @@ function erTrail () {
     `
 }
 
+let trailName = document.getElementById('trail')
+let trailLocation = document.getElementById('location')
+let difficultyValue = document.getElementById('difficulty')
+
 function submitTrail () {
-    if (trail.value < 1){
+    if (trailName.value < 1){
         alert('Make sure to add the name of your trail!')
         return
     } 
     
-    if (location.value < 1){
+    if (trailLocation.value < 1){
         alert('Make sure to add the location of your trail!')
         return
     }
 
     let userRating = document.querySelector('input[name="rating"]:checked').value
     let body = {
-        name: nameInput.value, 
+        name: trailName.value,
+        location: trailLocation.value,
+        difficulty: difficultyValue.value, 
         rating: +userRating, 
-        countryId: +countrySelect.value
     }
+
+    axios.post('/new-trail', body)
+    .then(() => {
+        countrySelect.value = 1
+        trailName.value = ''
+        trailLocation.value = ''
+        difficultyValue.value = 'easy'
+        document.querySelector('#rating-one').checked = true
+    })
 }
 
 function otherPage () {
