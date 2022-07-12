@@ -2,7 +2,7 @@
   "name": "capstone-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "back-end-server/index.js",
   "scripts": {
     "start": "node back-end-server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"

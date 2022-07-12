@@ -6,25 +6,25 @@ let trailName = document.getElementById('trail')
 let trailLocation = document.getElementById('location')
 let difficultyValue = document.getElementById('difficulty')
 
-function bstTrail () {
-    axios.get(`/bst-trail`)
+function getBst () {
+    axios.get('/bst-trail')
     .then(res => {
-        res.da
+        console.log(res)
+        // res.data.forEach(elem => {
+        //     let bstTrailCard = `<div class="country-card">
+        //         <h2>${tr.trailName}, ${elem.locationName}</h2>
+        //         <h3>Difficulty: ${elem.difficulty}</h3>
+        //         <h4>Rating: ${elem.rating}/5</h4>
+        //         <button onclick="hideCard()">Hide</button>
+        //         </div>
+        //     `
+
+        //     bstTrail.innerHTML += bstTrailCard
+        // })
     })
-    
-    return `
-        <div class="bstTrail">
-        <p class="trailName">Trail Number:${brantTrails.trail_id[1]}</p>
-        <p class="trailName">${brantTrails.trailName}</p>
-        <p>Location: ${brantTrails.locationName}</p>
-        <p>Difficulty: ${brantTrails.difficulty} damage</p>
-        <p>Rating: ${brantTrails.rating} damage</p>
-        <button class="trail-btn" onclick="hideTrail()">Hide Trail</button>
-        </div>
-    `
 }
 
-function gmTrail () {
+function getGm () {
     return `
         <div class="gmTrail">
         <p class="trailName">${trail.name}</p>
@@ -36,7 +36,7 @@ function gmTrail () {
     `
 }
 
-function erTrail () {
+function getEr () {
     return `
         <div class="erTrail">
         <p class="trailName">${trail.name}</p>
@@ -78,3 +78,5 @@ function submitTrail () {
         document.querySelector('#rating-one').checked = true
     })
 }
+
+bstTrail.addEventListener('click', getBst);

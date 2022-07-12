@@ -30,12 +30,17 @@ app.get('/js', (req, res) => {
 
 
 //Seeding for Postgres
-app.post('/seed', seed)
+app.post('/', seed)
 
-//Get Requests for Buttons
+//Get and Post Requests for Buttons webpage.html
 app.get('/bst-trail', getBst)
 app.get('/gm-trail', getGm)
 app.get('/er-trail', getEr)
+app.post('/create-trail', createTrail)
+
+//Get Request for Buttons page2.html
+app.get('/user-trails', getUserTrails)
+
 
 const port = process.env.PORT || 4000
 

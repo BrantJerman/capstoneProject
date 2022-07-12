@@ -99,7 +99,7 @@ const sequelize = new Sequelize(CONNECTION_STRING,{
 
     getGm : (req, res) => {
         sequelize.query(`
-        select trail_id[2] from brantTrails
+        SELECT trail_id[2] from brantTrails
         `).then((dbRes => res.status(200).send(dbRes[0])))
     },
 

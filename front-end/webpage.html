@@ -17,11 +17,11 @@
     <h1 class="center1" id="font1">On this website, we have compiled 3 of the greatest trails to mountain bike in all of Utah!</h1>
     <p class="center" id="font1">The trails all vary in length and location, but all are around the same difficulty level. Althought this is the opinion of OverLord and Mountain Bike Expert, Brant Jerman, this should be taken as fact. No other word of advice or opinion should be considered. Thanks!</p>
     <p class="center">Trail 1</p>
-    <button class="btn1" id="btn1" onclick="bstTrail()">BST Trail</button>
+    <button class="btn1" id="btn1">BST Trail</button>
     <p class="trail2" >Trail 2</p>
-    <button class="btn2" id="btn2" onclick="gmTrail()">Gooseberry Mesa Trail</button>
+    <button class="btn2" id="btn2" onclick="getGm()">Gooseberry Mesa Trail</button>
     <p class="trail3">Trail 3</p>
-    <button class="btn3" id="btn3" onclick="erTrail()">Elephant Rock Trail</button>
+    <button class="btn3" id="btn3" onclick="getEr()">Elephant Rock Trail</button>
 
 
     <h2 class="h2" id="font1">About OverLord Brant Jerman:</h2>
@@ -115,9 +115,14 @@
     </div>
 
     <img src="https://deseret.brightspotcdn.com/dims4/default/e55c0ca/2147483647/strip/true/crop/2484x3900+0+0/resize/566x889!/quality/90/?url=https%3A%2F%2Fcdn.vox-cdn.com%2Fthumbor%2FGMv6jr9Jm_OoIUHYiNfSyPy8YC0%3D%2F0x0%3A2484x3900%2F2484x3900%2Ffilters%3Afocal%281242x1950%3A1243x1951%29%2Fcdn.vox-cdn.com%2Fuploads%2Fchorus_asset%2Ffile%2F18220237%2F847d435681" alt="Picture of Brant" 
-    width="280" height="350" class="pic">   
+    width="280" height="350" class="pic">  
     
-    <script src="../node_modules/axios/dist/axios.min.js"></script>
+    <section id="bstTrail"></section>
+    <section id="gmTrail"></section>
+    <section id="erTrail"></section>
+
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
     <script src="/js"></script>
 </body>
