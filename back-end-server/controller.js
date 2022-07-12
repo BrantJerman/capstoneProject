@@ -77,4 +77,35 @@ const sequelize = new Sequelize(CONNECTION_STRING,{
         res.sendStatus(200)
     }).catch(err => console.log('error seeding DB', err))
     },
+    getUserTrails: (req, res) => {
+        sequelize.query(`
+        select * from userTrails
+        `).then((dbRes => res.status(200).send(dbRes[0])))
+    },
+    createTrail: (req, res) => {
+        const {trailName, locationName, difficulty, rating} = req.body
+
+        sequelize.query(`
+        insert into userTrails (trailName, locationName, difficulty, rating)
+            values ('${trailName}', '${locationName}', ${difficulty}, ${rating})
+        `).then((dbRes => res.status(200).send(dbRes[0])))
+    },
+
+    getBst : (req, res) => {
+        sequelize.query(`
+        select trail_id[1] from brantTrails
+        `).then((dbRes => res.status(200).send(dbRes[0])))
+    },
+
+    getGm : (req, res) => {
+        sequelize.query(`
+        select trail_id[2] from brantTrails
+        `).then((dbRes => res.status(200).send(dbRes[0])))
+    },
+
+    getEr : (req, res) => {
+        sequelize.query(`
+        select trail_id[3] from brantTrails
+        `).then((dbRes => res.status(200).send(dbRes[0])))
+    }
 }
