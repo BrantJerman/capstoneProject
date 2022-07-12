@@ -18,11 +18,18 @@ app.get('/new-page', (req, res) => {
 app.get('/new-page/css', (req, res) => {
     res.sendFile(path.join(__dirname, '../front-end/page2.css'))
 })
+app.get('/js', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end/index.js'))
+})
 
-//Get Requests
-// app.get('/bst-trail', getBst)
-// app.get('/gm-trail', getGm)
-// app.get('/er-trail', getEr)
+
+//Seeding for Postgres
+app.post('/seed', seed)
+
+//Get Requests for Buttons
+app.get('/bst-trail', getBst)
+app.get('/gm-trail', getGm)
+app.get('/er-trail', getEr)
 
 const port = process.env.PORT || 4000
 
