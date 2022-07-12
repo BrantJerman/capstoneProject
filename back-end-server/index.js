@@ -3,7 +3,7 @@ const express = require('express')
 const path = require('path')
 const cors = require('cors')
 const app = express()
-const {seed, 
+const { 
     getUserTrails, 
     createTrail, 
     getBst,
@@ -29,8 +29,7 @@ app.get('/js', (req, res) => {
 })
 
 
-//Seeding for Postgres
-app.post('/', seed)
+
 
 //Get and Post Requests for Buttons webpage.html
 app.get('/bst-trail', getBst)

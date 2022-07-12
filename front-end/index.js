@@ -6,22 +6,25 @@ let trailName = document.getElementById('trail')
 let trailLocation = document.getElementById('location')
 let difficultyValue = document.getElementById('difficulty')
 
+bstTrail.addEventListener('click', getBst);
+
 function getBst () {
-    axios.get('/bst-trail')
+    console.log('hit getBST')
+    axios.get('http://localhost:4000/bst-trail')
     .then(res => {
         console.log(res)
-        // res.data.forEach(elem => {
-        //     let bstTrailCard = `<div class="country-card">
-        //         <h2>${tr.trailName}, ${elem.locationName}</h2>
-        //         <h3>Difficulty: ${elem.difficulty}</h3>
-        //         <h4>Rating: ${elem.rating}/5</h4>
-        //         <button onclick="hideCard()">Hide</button>
-        //         </div>
-        //     `
+        res.data.forEach(elem => {
+            let bstTrailCard = `<div class="country-card">
+                <h2>${tr.trailName}, ${elem.locationName}</h2>
+                <h3>Difficulty: ${elem.difficulty}</h3>
+                <h4>Rating: ${elem.rating}/5</h4>
+                <button onclick="hideCard()">Hide</button>
+                </div>
+            `
 
-        //     bstTrail.innerHTML += bstTrailCard
-        // })
-    })
+            bstTrail.innerHTML += bstTrailCard
+        })
+    }).catch(err => console.log(err))
 }
 
 function getGm () {
@@ -79,4 +82,3 @@ function submitTrail () {
     })
 }
 
-bstTrail.addEventListener('click', getBst);
