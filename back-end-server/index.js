@@ -20,9 +20,9 @@ app.get('/new-page/css', (req, res) => {
 })
 
 //Get Requests
-app.get('/bst-trail', getBst)
-app.get('/gm-trail', getGm)
-app.get('/er-trail', getEr)
+// app.get('/bst-trail', getBst)
+// app.get('/gm-trail', getGm)
+// app.get('/er-trail', getEr)
 
 const port = process.env.PORT || 4000
 
