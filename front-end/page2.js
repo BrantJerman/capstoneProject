@@ -1,5 +1,6 @@
 const allTrails1 = document.getElementById('allTrails1')
 const divAllTrails = document.getElementById('divAllTrails')
+const plzwork = document.getElementById('allTrails')
 
 function getAllTrails () {
     console.log('hit getAllTrails')
@@ -7,12 +8,15 @@ function getAllTrails () {
     axios.get('/all-trails')
     .then(res => {
         console.log(res)
-        res.data.forEach(elem => {
-            let allTrailsCard = `
-                <pre><p class="small">Name of Trail: ${res.data[0].trailname} || Location of Trail: ${res.data[0].locationname} || Difficulty: ${res.data[0].difficulty} || Rating: ${res.data[0].rating}/5</p>
+        for (i = 0; i <= res.data.length; i++) {
+            console.log(res.data.length)
+            allTrailsCard = document.createElement('p')
+
+            allTrailsCard.innerHTML = `
+                <pre><p class="small">Name of Trail: ${res.data[i].trailname} || Location of Trail: ${res.data[i].locationname} || Difficulty: ${res.data[i].difficulty} || Rating: ${res.data[i].rating}/5</p>
             `
-            divAllTrails.innerHTML = allTrailsCard
-        })
+            plzwork.appendChild(allTrailsCard)
+        }
     }).catch(err => console.log(err))
 }
 
