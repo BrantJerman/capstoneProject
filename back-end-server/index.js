@@ -27,6 +27,9 @@ app.get('/new-page/css', (req, res) => {
 app.get('/js', (req, res) => {
     res.sendFile(path.join(__dirname, '../front-end/index.js'))
 })
+app.get('/js2', (req, res) => {
+    res.sendFile(path.join(__dirname, '../front-end/page2.js'))
+})
 
 
 
@@ -38,7 +41,7 @@ app.get('/er-trail', getEr)
 app.post('/create-trail', createTrail)
 
 //Get Request for Buttons page2.html
-app.get('/user-trails', getUserTrails)
+app.get('/all-trails', getUserTrails)
 
 
 const port = process.env.PORT || 4000

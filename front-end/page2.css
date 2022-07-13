@@ -84,6 +84,23 @@ body {
       margin-bottom: .3%;
     }
     .userTrails {
-      margin-left: 50%;
-      
+      margin-left: 50%; 
     }
+
+    #allTrails {
+      margin-top: 3%;
+      height: 650px;
+      width: 63%;
+      background-color: #C59849;
+      border-style: solid;
+      border-color: #FFDCCC;
+      margin-left: 18%;
+      position: fixed;
+      display: none;
+    }
+
+    .small {
+      margin-left: .5%;
+      font-size: large;
+    }
+   

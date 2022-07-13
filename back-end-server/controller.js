@@ -31,19 +31,19 @@ const sequelize = new Sequelize(CONNECTION_STRING,{
     getBst : (req, res) => {
         console.log('hit server')
         sequelize.query(`
-        select trail_id[1] from brantTrails
+        select * from branttrails where trail_id = 1
         `).then((dbRes => res.status(200).send(dbRes[0])))
     },
 
     getGm : (req, res) => {
         sequelize.query(`
-        SELECT trail_id[2] from brantTrails
+        select * from branttrails where trail_id = 2
         `).then((dbRes => res.status(200).send(dbRes[0])))
     },
 
     getEr : (req, res) => {
         sequelize.query(`
-        select trail_id[3] from brantTrails
+        select * from branttrails where trail_id = 3
         `).then((dbRes => res.status(200).send(dbRes[0])))
     }
 }
