@@ -1,6 +1,7 @@
 require('dotenv').config()
 const Sequelize = require('sequelize')
 
+
 const {CONNECTION_STRING} = process.env
 
 const sequelize = new Sequelize(CONNECTION_STRING,{
@@ -20,11 +21,15 @@ const sequelize = new Sequelize(CONNECTION_STRING,{
         `).then((dbRes => res.status(200).send(dbRes[0])))
     },
     createTrail: (req, res) => {
-        const {trailName, locationName, difficulty, rating} = req.body
+        console.log('hit createTrail function')
+        console.log(req.body)
+
+        const {trailname, locationname, difficultyValue, rating} = req.body
+
 
         sequelize.query(`
-        insert into userTrails (trailName, locationName, difficulty, rating)
-            values ('${trailName}', '${locationName}', ${difficulty}, ${rating})
+        insert into userTrails (trailname, locationname, difficulty, rating)
+            values ('${trailname}', '${locationname}', '${difficultyValue}', ${rating})
         `).then((dbRes => res.status(200).send(dbRes[0])))
     },
 

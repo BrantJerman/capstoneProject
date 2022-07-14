@@ -4,6 +4,7 @@ const gmTrail = document.getElementById('btn2')
 const divGm = document.getElementById('divGm')
 const erTrail = document.getElementById('btn3')
 const divEr = document.getElementById('divEr')
+const submitTrailBtn = document.getElementById('add')
 
 let trailName = document.getElementById('trail')
 let trailLocation = document.getElementById('location')
@@ -86,34 +87,52 @@ function hideCardEr () {
 
 
 
+let newTrailName = document.getElementById('trail').value
+let newTrailLocation = document.getElementById('location').value
+let difficulty = document.getElementById('difficulty').value
+let userRating = document.querySelector('input[name="rating"]:checked').value
+
 
 function submitTrail () {
-    if (trailName.value < 1){
+    console.log('hit submit trail btn')
+
+    console.log(document.getElementById('trail').value)
+    console.log(document.getElementById('location').value)
+    console.log(document.getElementById('difficulty').value)
+    console.log(document.querySelector('input[name="rating"]:checked').value)
+
+    if (document.getElementById('trail').value < 1){
         alert('Make sure to add the name of your trail!')
         return
     } 
     
-    if (trailLocation.value < 1){
+    if (document.getElementById('location').value < 1){
         alert('Make sure to add the location of your trail!')
         return
     }
 
-    let userRating = document.querySelector('input[name="rating"]:checked').value
     let body = {
-        trailname: trailName.value,
-        traillocation: trailLocation.value,
-        difficulty: difficultyValue.value, 
-        rating: +userRating, 
+        trailname: document.getElementById('trail').value,
+        locationname: document.getElementById('location').value,
+        difficultyValue: document.getElementById('difficulty').value, 
+        rating: document.querySelector('input[name="rating"]:checked').value 
     }
 
-    axios.post('/new-trail', body)
+    console.log(body)
+
+    axios.post('/create-trail', body)
     .then(() => {
-        countrySelect.value = 1
-        trailName.value = ''
-        trailLocation.value = ''
-        difficultyValue.value = 'easy'
+        document.getElementById('trail').value = ''
+        document.getElementById('location').value = ''
+        document.getElementById('difficulty').value = 'easy'
         document.querySelector('#rating-one').checked = true
+
+        console.log('Successfully Created a Trail!')
     })
 }
 
+submitTrailBtn.addEventListener('click', submitTrail);
 
+// function check1 () {
+//     console.log(newTrailName)
+// }

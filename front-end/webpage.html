@@ -35,19 +35,15 @@
     <h3 class="h3" id="text">Send in your <br>own trails here!</h3>
     
     <p class="textForSide">Name of Trail:</p>
-    <input type="text" class="input" id="trail">
+    <input type="text" class="input" id="trail" value="">
     <br>
     <p class="textForSide6" width="200px">Location of Trail <br>(City and State):</p>
-    <input type="text" class="input" id="location">
+    <input type="text" class="input" id="location" value="">
     <br>
-    <p class="textForSide3">Difficulty:</p>
+    <p class="textForSide3">Difficulty <br> (Hard, Medium, Easy):</p>
     
-        <select id="difficulty">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-                
-              </select>
+        <input id="difficulty" value="">
+            
         
         <style>
 
@@ -84,7 +80,7 @@
         <input type="radio" name="rating" value="5" id="rating-five"/>
     </div>
     <p class="submitText">Click Here To  Submit <br> Your Trail To Our <br>Database!</p>
-    <input type="submit" class="submit" id="add" onclick="submitTrail()">
+    <input type="submit" class="submit" id="add">
 
     <h4 class="gear">Gear <br>Recommendations:</h4>
     <p class="elvis"><a href="https://global.pivotcycles.com/products/mach-6">Bike</a></p>
